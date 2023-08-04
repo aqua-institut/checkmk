@@ -1,4 +1,4 @@
-![](https://seven.io/seven_outline_white.svg "seven Logo")
+![](https://www.seven.io/wp-content/uploads/Logo.svg "seven Logo")
 
 seven notification plugin for checkmk
 
@@ -22,10 +22,10 @@ chmod +x /<omd-path>/sites/<sitename>/local/share/check_mk/notifications/seven
 
 ### Set API Key
 
-Set your API Key as the first parameter or via environment variable `SEVEN_API_KEY`.
+Set your [API Key](https://help.seven.io/en/api-key-access) as the first parameter or via environment variable `SEVEN_API_KEY`.
 
 ## Support
 
-Need help? Feel free to [contact us](https://www.sms77.io/en/company/contact).
+Need help? Feel free to [contact us](https://www.c.io/en/company/contact).
 
 [![MIT](https://img.shields.io/badge/License-MIT-teal.svg)](LICENSE)

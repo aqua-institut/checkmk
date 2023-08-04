@@ -11,7 +11,7 @@ import sys, os, urllib
 
 api_key = os.environ.get('NOTIFY_PARAMETER_1', os.environ.get('SEVEN_API_KEY'))
 sender = os.environ.get('NOTIFY_PARAMETER_2', '')
-api_url = "https://gateway.sms77.io/api/sms"
+api_url = "https://gateway.seven.io/api/sms"
 
 to = os.environ.get("NOTIFY_CONTACTPAGER")
 message = os.environ['NOTIFY_HOSTNAME'] + " "
@@ -22,8 +22,13 @@ if os.environ['NOTIFY_WHAT'] == 'SERVICE':
 else:
     message += "is " + os.environ['NOTIFY_HOSTSTATE'] # Host message
 
-url = "%s?" % api_url + urllib.urlencode([("p", api_key) ("from", sender),
-                                           ("to", to), ("text", message)])
+qs = urllib.urlencode({
+    'from': sender,
+    'p': api_key,
+    'text': message,
+    'to': to,
+})
+url = "%s?" % api_url + qs
 
 try:
     handle = urllib.urlopen(url)
